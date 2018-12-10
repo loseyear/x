@@ -1,0 +1,17 @@
+# IDE
+.DS_Store
+
+# dependencies
+node_modules
+.nyc_output
+
+# production
+assets
+build/reactFest.json
+
+# misc
+*.log
+*.swp
+npm-debug.log
+log/*
+!log/

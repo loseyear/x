@@ -1,0 +1,54 @@
+{
+  "name": "x",
+  "version": "0.0.1",
+  "description": "x",
+  "main": "bin",
+  "bin": {
+    "x": "index.js"
+  },
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development pm2 start ./config/pm2.dev.json",
+    "prod": "cross-env NODE_ENV=production pm2 start ./config/pm2.prod.json",
+    "lint": "eslint -c .eslintrc.js bin config controller library mock route --fix",
+    "mock": "cross-env NODE_ENV=test mocha mock/**/*.spec.js --exit -t 60s",
+    "mock:nyc": "cross-env NODE_ENV=test nyc mocha mock/**/*.spec.js --exit -t 60s",
+    "mock:watch": "cross-env NODE_ENV=test mocha --watch mock/**/*.spec.js --exit"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/loseyear/x.git"
+  },
+  "keywords": [
+    "x"
+  ],
+  "author": "z",
+  "license": "ISC",
+  "dependencies": {
+    "app-root-path": "^2.1.0",
+    "koa": "^2.6.1",
+    "koa-bodyparser": "^4.2.1",
+    "koa-onerror": "^4.1.0",
+    "koa-router": "^7.4.0",
+    "path": "^0.12.7",
+    "stack-trace": "0.0.10",
+    "winston": "^3.1.0",
+    "winston-daily-rotate-file": "^3.4.0"
+  },
+  "devDependencies": {
+    "acorn": "^6.0.4",
+    "babel-eslint": "^10.0.1",
+    "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
+    "mocha": "^5.2.0",
+    "supertest": "^3.3.0"
+  },
+  "bugs": {
+    "url": "https://github.com/loseyear/x/issues"
+  },
+  "homepage": "https://github.com/loseyear/x#readme"
+}
